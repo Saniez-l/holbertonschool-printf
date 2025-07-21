@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
  * struct template - structure containing var types and matching functions
@@ -14,8 +15,14 @@ struct template
 	void (*print)(va_list args);
 };
 
+/*function to know the lenght of the string*/
 int strlen(char *str);
-int printchar(va_list args);
-int printstring(va_list args);
+
+/*annex functions depending on the type*/
+int print_char(va_list args);
+int print_string(va_list args);
+
+/*main function*/
+int _printf(const char *format, ...);
 
 #endif
