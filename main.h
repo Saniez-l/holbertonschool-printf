@@ -20,7 +20,7 @@ typedef struct template
 int _strlen(char *str);
 
 /*fctn to print the % if the user enters %%*/
-void print_perc(va_list args);
+int print_perc(va_list args);
 
 /*annex functions depending on the type*/
 int print_char(va_list args);
