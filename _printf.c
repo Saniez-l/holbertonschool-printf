@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 templ types[] = {
 	{"c", print_char},
 	{"s", print_string},
-	/*{"%", print_perc},	 a rediger*/
+	{"%", print_perc},
 	{NULL, NULL}
 };
 
@@ -35,10 +35,11 @@ templ types[] = {
 				if (format[i + 1] == (*types[j].indic))
 				{
 					types[j].print(args);
+					i = i + 2;
 				}
 			}
 		}
-		write(1, &format[i], 1);
+			write(1, &format[i], 1);
 		len++;
 
 	}
