@@ -1,10 +1,5 @@
 #include "main.h"
 
-struct template types[] = {
-	{"c", print_char},
-	{"s", print_string},
-	{NULL, NULL}
-};
 
 /**
  * print_char - fctn that will print if the type of the arg is char
@@ -26,9 +21,21 @@ int print_char(va_list args)
 int print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
-	int len = strlen(str);
 
 	if (str == NULL)
 		return (0);
-	return (write(1, &str, len));
+	return (write(1, str, _strlen(str)));
+}
+
+/**
+ * print_perc - function that handle the case if user wants to print a %
+ * @args: description
+ * Return: int
+ */
+int print_perc(va_list args)
+{
+	char c = '%';
+
+	(void)args;
+	return (write(1, &c, 1));
 }
