@@ -19,6 +19,7 @@ templ types[] = {
 	{"i", print_int},
 	{"d", print_int},
 	{"%", print_perc},
+	{"b", print_binary},
 	{NULL, NULL}
 };
 
