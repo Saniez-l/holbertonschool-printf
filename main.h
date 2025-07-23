@@ -25,6 +25,8 @@ int print_perc(va_list args);
 /*annex functions depending on the type*/
 int print_char(va_list args);
 int print_string(va_list args);
+int print_int(va_list args);
+
 
 /*main function*/
 int _printf(const char *format, ...);

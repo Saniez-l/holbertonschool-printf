@@ -16,6 +16,8 @@ int _printf(const char *format, ...)
 templ types[] = {
 	{"c", print_char},
 	{"s", print_string},
+	{"i", print_int},
+	{"d", print_int},
 	{"%", print_perc},
 	{NULL, NULL}
 };
