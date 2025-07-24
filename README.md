@@ -2,29 +2,31 @@
 
 ## Description
 
-Ce projet consiste à recréer la fonction standard printf de la bibliothèque C.
+In this project we tried to reproduces the standart printf function.
+The function receives a string passed as argument.
+It associates it with a specific printing function, depending on the type of the arg passed, using a recognized specifier.
+It can handle characters, strings, integers and binaries.
+More types could later be added using the structure 'types'.
 
-## Linck GitHub
+
+## GitHub Link
 
 ([GitHub Pages]())
 
-## Fonctionnalités
+## Features
 
 %% : Print character -> %
 
 %c : Print a character
 
-%s : Affiche une chaîne de caractères
+%s : Print a string
 
-%d / %i : Affiche un entier signé
+%d / %i : Print an int and decimal
 
-%u : Affiche un entier non signé
+%b : Print an int translated in binary
 
-%x / %X : Affiche un entier en hexadécimal (minuscule / majuscule)
-
-%p : Affiche une adresse mémoire
-
-## Utilisation
+## How to use
+Test exemple:
 
     #include "main.h"
     /**
@@ -69,23 +71,23 @@ Ce projet consiste à recréer la fonction standard printf de la bibliothèque C
         return (0);
     }
 
-Compile avec : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
+Compile using following command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
 
-## Structure des fichier
-+ _printf.c                             //fonction principale
-+ main.                                 //header
-+ types_function_binary.c               //fonction binaire
-+ types_functions_int.c                 //fonction int
-+ types_functions_strchar.c             //fonction string, char and %%
-+ anexfunctions.c                       //fonction strlen
-+ .gitignore                            //file where we put all the tests and executable files
+## Structure of files
++ _printf.c                             //main function (printf function)
++ main.h                                //header
++ types_function_binary.c               //function to print in binary
++ types_functions_int.c                 //function to print an int
++ types_functions_strchar.c             //function to print a string, char and %%
++ anexfunctions.c                       //reproduction of the strlen standart function
++ .gitignore                            //file containing all the tests and executable files
 + README.md                             //explanation of the project
 
-## Diagramme
+## Flowchart 
 
 ![How the function works.](image/printf.drawio.png)
 
-## Regles respectées
+## The rules we followed
 
 + Editors such as vi, vim, and emacs were used during development.
 + Compilation was performed on Ubuntu 20.04 LTS using gcc with the following options: -Wall -Werror -Wextra -pedantic -std=gnu89.
@@ -98,6 +100,6 @@ Compile avec : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _print
 + All function prototypes have been declared within a header file named main.h, which is included in the repository.
 + Appropriate include guards were implemented in all header files to prevent multiple inclusions.
 .........................................
-## Auteur
+## Authors
 Sarah Wacquier
 Christophe Saniez-Lenthieul
