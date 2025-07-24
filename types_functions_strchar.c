@@ -2,9 +2,15 @@
 
 
 /**
- * print_char - fctn that will print if the type of the arg is char
- * @args: the list of args passed to the main fctn
- * Return: 1 if success.
+ * print_char - Prints a character from the argument list
+ *
+ * @args: va_list containing the character to be printed
+ *
+ * Description:
+ * This function extracts a character from the variable arguments
+ * and prints it to the standard output.
+ *
+ * Return: the number of char printed (always 1)
  */
 int print_char(va_list args)
 {
@@ -14,9 +20,16 @@ int print_char(va_list args)
 }
 
 /**
- * print_string - fctn that will print if the type of the arg is a string
- * @args: the list of args passed to the fctn
- * Return: the number of char in the string
+ * print_string - Prints a string from the argument list
+ *
+ * @args: va_list containing the string to be printed
+ *
+ * Description:
+ * This function receives a string argument from the variable argument list
+ * and prints it to the standard output.
+ * If the string is NULL, it prints nothing and returns 0.
+ *
+ * Return: the number of characters to be printed
  */
 int print_string(va_list args)
 {
@@ -28,9 +41,14 @@ int print_string(va_list args)
 }
 
 /**
- * print_perc - function that handle the case if user wants to print a %
- * @args: description
- * Return: int
+ * print_perc - Prints a percent sign '%'
+ * @args: Unused variable
+ *
+ * Description:
+ * This function simply writes a literal '%' character to the standard output.
+ * It handles the case in which the user wants to print a %%, by writting '%%'
+ *
+ * Return: Number of characters printed (always 1)
  */
 int print_perc(va_list args)
 {

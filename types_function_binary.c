@@ -1,9 +1,16 @@
 #include "main.h"
 
 /**
- * print_binary - function that reproduces %b for binary
- * @args: argument variadique
- * Return: count
+ * print_binary - Prints an unsigned integer in binary format
+ * @args: va_list containing the integer to be printed
+ *
+ * Description:
+ * This function receives an unsigned integer from the variable argument list
+ * and converts it into binary. It stores each bit into a
+ * temporary buffer in reverse order and then writes it to standard output in
+ * the correct sequence. If the value is zero, it prints '0' and returns 0.
+ *
+ * Return: Number of characters printed
  */
 int print_binary(va_list args)
 {
