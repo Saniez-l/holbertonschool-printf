@@ -1,18 +1,18 @@
-# **Projet : _printf**
+# **Project : _printf**
 
 ## Description
 
 Ce projet consiste à recréer la fonction standard printf de la bibliothèque C.
 
-## Lien GitHub
+## Linck GitHub
 
 ([GitHub Pages]())
 
 ## Fonctionnalités
 
-%% : Affiche le caractère %
+%% : Print character -> %
 
-%c : Affiche un caractère
+%c : Print a character
 
 %s : Affiche une chaîne de caractères
 
@@ -83,17 +83,21 @@ Compile avec : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _print
 
 ## Diagramme
 
-![How the function works.]()
+![How the function works.](image/printf.drawio.png)
 
 ## Regles respectées
 
-+ -> Code compilated on  Ubuntu 20.04 LTS using gcc with this option -Wall -Werror -Wextra -pedantic -std=gnu89
-+ -> All file end with a new line
-+ -> Code use betty style
-+ -> No use global variable
-+ -> 5 function maximum per file
-+ -> Protype of all function incled in the main.h
++ Editors such as vi, vim, and emacs were used during development.
++ Compilation was performed on Ubuntu 20.04 LTS using gcc with the following options: -Wall -Werror -Wextra -pedantic -std=gnu89.
++ Every source file was ensured to end with a newline character.
++ A README.md file was created and placed at the root of the project directory.
++ The codebase follows the Betty coding style and was verified using betty-style.pl and betty-doc.pl.
++ No global variables were used.
++ Each source file contains no more than five functions to maintain readability and structure.
++ Example main.c files were used for testing but were not included in the repository, in accordance with evaluation requirements. The final compilation was conducted using external main.c files.
++ All function prototypes have been declared within a header file named main.h, which is included in the repository.
++ Appropriate include guards were implemented in all header files to prevent multiple inclusions.
 .........................................
 ## Auteur
-
-
+Sarah Wacquier
+Christophe Saniez-Lenthieul
