@@ -89,17 +89,14 @@ Compile using following command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89
 
 ## The rules we followed
 
-+ Editors such as vi, vim, and emacs were used during development.
-+ Compilation was performed on Ubuntu 20.04 LTS using gcc with the following options: -Wall -Werror -Wextra -pedantic -std=gnu89.
-+ Every source file was ensured to end with a newline character.
-+ A README.md file was created and placed at the root of the project directory.
-+ The codebase follows the Betty coding style and was verified using betty-style.pl and betty-doc.pl.
++ Edition was made on VS code.
++ A functional README is present, you are actually enjoying it atm.
++ The codebase follows the Betty coding style. Every file ends with a new line and most of the files have less than 40 lines. (but not all of them, sadly)
++ To improve readability of our files we put each different functions in a specific file.
 + No global variables were used.
-+ Each source file contains no more than five functions to maintain readability and structure.
-+ Example main.c files were used for testing but were not included in the repository, in accordance with evaluation requirements. The final compilation was conducted using external main.c files.
-+ All function prototypes have been declared within a header file named main.h, which is included in the repository.
++ All function prototypes can be viewed in the header file (main.h)
 + Appropriate include guards were implemented in all header files to prevent multiple inclusions.
-.........................................
+
 ## Authors
 Sarah Wacquier
 Christophe Saniez-Lenthieul
