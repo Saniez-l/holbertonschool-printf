@@ -18,12 +18,15 @@ int print_binary(va_list args)
 	char buffer[32];
 	int i = 0, count = 0;
 
+	/*si n est egale a zero retourné zero*/
 	if (n == 0)
 	{
 		write(1, "0", 1);
 		return (0);
 	}
 
+	/*tant que n est plus grand que 0 aplliquer la formul */
+	/*n % 2 pour avoit 0 ou 1 , + '0' tansformation en ascII plus 48*/
 	while (n > 0)
 	{
 		buffer[i] = (n % 2) + '0';
@@ -31,6 +34,7 @@ int print_binary(va_list args)
 		i++;
 	}
 
+	/*imprimé dans le bon sens*/
 	while (i--)
 	{
 		count = count + write(1, &buffer[i], 1);
