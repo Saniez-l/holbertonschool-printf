@@ -6,7 +6,7 @@ Ce projet consiste à recréer la fonction standard printf de la bibliothèque C
 
 ## Lien GitHub
 
-([GitHub Pages](https://github.com/Saniez-l/holbertonschool-printf))
+([GitHub Pages]())
 
 ## Fonctionnalités
 
