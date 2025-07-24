@@ -7,7 +7,7 @@
  */
 int print_binary(va_list args)
 {
-	int n = va_arg(args, int);
+	unsigned int n = va_arg(args, int);
 	char buffer[32];
 	int i = 0, count = 0;
 
@@ -26,7 +26,7 @@ int print_binary(va_list args)
 
 	while (i--)
 	{
-		count = write(1, &buffer[i], 1);
+		count = count + write(1, &buffer[i], 1);
 	}
 	return (count);
 }

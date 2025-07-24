@@ -7,8 +7,6 @@
  */
 int _printf(const char *format, ...)
 {
-
-
 /**
  * struct template types - structure containing all the types of var allowed
  * and matching fonction to print them correctly, see header for struct
@@ -25,6 +23,7 @@ templ types[] = {
 
 	int i = 0, j = 0;
 	int len = 0;
+	int flag = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -33,14 +32,22 @@ templ types[] = {
 	{
 		if (format[i] == '%')
 		{
+			i++;
 			for (j = 0; (types[j].indic) != NULL; j++)
 			{
-				if (format[i + 1] == (*types[j].indic))
+				if (format[i] == (*types[j].indic))
 				{
-					types[j].print(args);
-					i = i + 2;
+					flag = 1;
+					len = len + types[j].print(args);
+					break;
 				}
 			}
+			if (flag == 0)
+			{
+				write (1, "%", 1);
+				write (1, &format[i], 1);
+			}
+			continue;
 		}
 			write(1, &format[i], 1);
 		len++;
