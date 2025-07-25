@@ -40,7 +40,7 @@ templ types[] = {
 	int i = 0, j = 0;		/* indexes to go trough the string and trough the structure*/
 	int len = 0;			/* var to return, counts the length of the string */
 	int flag = 0;		 	/* var to know if the char after % matches any of the struct char */
-	int ret;				/* to return -1 if pointer to fctn failed */
+	/* int ret;				/* to return -1 if pointer to fctn failed */
 	va_list args;
 
 	if (format == NULL)
