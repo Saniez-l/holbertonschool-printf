@@ -71,7 +71,11 @@ Test exemple:
         return (0);
     }
 
-Compile using following command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
+Compile using following command : 
+
+```c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
+```
 
 ## Structure of files
 + _printf.c                             //main function (printf function)
