@@ -21,8 +21,7 @@ int print_binary(va_list args)
 	/*si n est egale a zero retourné zero*/
 	if (n == 0)
 	{
-		write(1, "0", 1);
-		return (0);
+		return (write(1, "0", 1));
 	}
 
 	/*tant que n est plus grand que 0 aplliquer la formul */
