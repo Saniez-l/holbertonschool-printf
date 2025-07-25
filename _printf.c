@@ -2,18 +2,18 @@
 
 /**
  * _printf - function that reproduces the printf function
- * 
+ *
  * Description:
- * This function parses a format string and prints corresponding
+ * This function receives a format string and prints corresponding
  * arguments based on recognized specifiers. It supports common types :
- * - characters (%c), 
+ * - characters (%c),
  * - strings (%s)
  * - integers (%d/%i)
  * - binary (%b)
- * Additional specifiers can be added via the `types` struct. 
- * 
+ * Additional specifiers can be added via the `types` struct.
+ *
  * @format: the string to be printed
- * 
+ *
  * Return: int type, the length of the string printed
  */
 
@@ -40,12 +40,17 @@ templ types[] = {
 	int i = 0, j = 0;		/* indexes to go trough the string and trough the structure*/
 	int len = 0;			/* var to return, counts the length of the string */
 	int flag = 0;		 	/* var to know if the char after % matches any of the struct char */
+	int ret;				/* to return -1 if pointer to fctn failed */
 	va_list args;
+
+	if (format == NULL)
+	return (-1);
 
 	va_start(args, format);
 
 	for (i = 0; format[i] != '\0'; i++)						/* go trough the string */
 	{
+		flag = 0;
 		if (format[i] == '%')								/* if % is found */
 		{
 			i++;
@@ -55,6 +60,9 @@ templ types[] = {
 				{											/* + activate the 'match found' flag */
 					flag = 1;								/* + add the lenght of the var printed to the len count, to return the right lenght */
 					len = len + types[j].print(args);
+					ret = types[j].print(args);				/* check if the pointer worked correctly */
+					if (ret < 0)
+						return (-1);
 					break;
 				}
 			}
@@ -65,7 +73,7 @@ templ types[] = {
 			}
 			continue;										/* if % founded, skip the following lines => avoids printing format[i] 2 times*/
 		}
-			write(1, &format[i], 1);
+		write(1, &format[i], 1);
 		len++;
 	}
 	va_end(args);

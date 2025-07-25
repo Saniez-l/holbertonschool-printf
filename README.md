@@ -1,30 +1,32 @@
-# **Projet : _printf**
+# **Project : _printf**
 
 ## Description
 
-Ce projet consiste à recréer la fonction standard printf de la bibliothèque C.
+In this project we tried to reproduces the standart printf function.
+The function receives a string passed as argument.
+It associates it with a specific printing function, depending on the type of the arg passed, using a recognized specifier.
+It can handle characters, strings, integers and binaries.
+More types could later be added using the structure 'types'.
 
-## Lien GitHub
+
+## GitHub Link
 
 ([GitHub Pages]())
 
-## Fonctionnalités
+## Features
 
-%% : Affiche le caractère %
+%% : Print character -> %
 
-%c : Affiche un caractère
+%c : Print a character
 
-%s : Affiche une chaîne de caractères
+%s : Print a string
 
-%d / %i : Affiche un entier signé
+%d / %i : Print an int and decimal
 
-%u : Affiche un entier non signé
+%b : Print an int translated in binary
 
-%x / %X : Affiche un entier en hexadécimal (minuscule / majuscule)
-
-%p : Affiche une adresse mémoire
-
-## Utilisation
+## How to use
+Test exemple:
 
     #include "main.h"
     /**
@@ -69,31 +71,32 @@ Ce projet consiste à recréer la fonction standard printf de la bibliothèque C
         return (0);
     }
 
-Compile avec : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
+Compile using following command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c types_functions_strchar.c types_functions_int.c types_function_binary.c anexfunctions.c testint.c -o printf
 
-## Structure des fichier
-+ _printf.c                             //fonction principale
-+ main.                                 //header
-+ types_function_binary.c               //fonction binaire
-+ types_functions_int.c                 //fonction int
-+ types_functions_strchar.c             //fonction string, char and %%
-+ anexfunctions.c                       //fonction strlen
-+ .gitignore                            //file where we put all the tests and executable files
+## Structure of files
++ _printf.c                             //main function (printf function)
++ main.h                                //header
++ types_function_binary.c               //function to print in binary
++ types_functions_int.c                 //function to print an int
++ types_functions_strchar.c             //function to print a string, char and %%
++ anexfunctions.c                       //reproduction of the strlen standart function
++ .gitignore                            //file containing all the tests and executable files
 + README.md                             //explanation of the project
 
-## Diagramme
+## Flowchart 
 
-![How the function works.]()
+![How the function works.](image/printf.drawio.png)
 
-## Regles respectées
+## The rules we followed
 
-+ -> Code compilated on  Ubuntu 20.04 LTS using gcc with this option -Wall -Werror -Wextra -pedantic -std=gnu89
-+ -> All file end with a new line
-+ -> Code use betty style
-+ -> No use global variable
-+ -> 5 function maximum per file
-+ -> Protype of all function incled in the main.h
-.........................................
-## Auteur
++ Edition was made on VS code.
++ A functional README is present, you are actually enjoying it atm.
++ The codebase follows the Betty coding style. Every file ends with a new line and most of the files have less than 40 lines. (but not all of them, sadly)
++ To improve readability of our files we put each different functions in a specific file.
++ No global variables were used.
++ All function prototypes can be viewed in the header file (main.h)
++ Appropriate include guards were implemented in all header files to prevent multiple inclusions.
 
-
+## Authors
+Sarah Wacquier
+Christophe Saniez-Lenthieul
