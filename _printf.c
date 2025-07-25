@@ -60,9 +60,9 @@ templ types[] = {
 				{											/* + activate the 'match found' flag */
 					flag = 1;								/* + add the lenght of the var printed to the len count, to return the right lenght */
 					len = len + types[j].print(args);
-/*					ret = types[j].print(args);				/* check if the pointer worked correctly */
-/*					if (ret < 0) */
-/*						return (-1);*/
+					ret = types[j].print(args);				 /* check if the pointer worked correctly */
+					if (ret < 0)
+						return (-1);
 					break;
 				}
 			}
