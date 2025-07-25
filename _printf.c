@@ -40,7 +40,6 @@ templ types[] = {
 	int i = 0, j = 0;		/* indexes to go trough the string and trough the structure*/
 	int len = 0;			/* var to return, counts the length of the string */
 	int flag = 0;		 	/* var to know if the char after % matches any of the struct char */
-	int ret;				/* to return -1 if pointer to fctn failed */
 	va_list args;
 
 	if (format == NULL)
@@ -60,9 +59,6 @@ templ types[] = {
 				{											/* + activate the 'match found' flag */
 					flag = 1;								/* + add the lenght of the var printed to the len count, to return the right lenght */
 					len = len + types[j].print(args);
-					ret = types[j].print(args);				 /* check if the pointer worked correctly */
-					if (ret < 0)
-						return (-1);
 					break;
 				}
 			}
