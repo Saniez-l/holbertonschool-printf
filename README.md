@@ -98,5 +98,5 @@ Compile using following command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89
 + Appropriate include guards were implemented in all header files to prevent multiple inclusions.
 
 ## Authors
-Sarah Wacquier
+Sarah Wacquiez
 Christophe Saniez-Lenthieul
