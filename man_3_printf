@@ -1,0 +1,64 @@
+.TH _printf 3
+.SH NAME
+_printf
+
+
+.SH SYNOPSIS
+
+#include "main.h"
+.br
+int print_char(va_list args);
+.br
+int print_string(va_list args);
+.br
+int print_integer(va_list args);
+.br
+int _printf(const char *format, ...);
+.br
+int print_perc(va_list args);
+.br
+int _strlen(char *str);
+
+.SH DESCRIPTION
+Displays a string in the format with the following options
+
+.SH Conversion specifiers
+
+.TP
+%i
+Display an integer
+
+.TP
+%d
+Displays an integer as %i
+
+.TP
+%c
+Displays a character
+
+.TP
+%s
+Displays a string
+
+.TP
+%%
+Displays the % sign
+
+.TP
+%b
+Convert and display an integer in binary form
+
+The function analyzes the string passed as a parameter and replaces each specifier with the corresponding value provided through the variable argument list.
+
+.SH EXEMPLE
+
+_printf("Number %d", number_a);
+
+.SH AUTHOR
+Sarah Wacquiez & Christophe Saniez-Lenthieul
+
+.SH SEE ALSO
+ printf, puts, scanf
+ 
+                                                      "July 2025"
+                                            "Holberton function manual page"
